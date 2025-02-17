@@ -1,20 +1,24 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../config/database");
 
-const photo = sequelize.define("photo", {
-  imageUrl: DataTypes.STRING,
-  description: DataTypes.STRING,
-  altDescription: DataTypes.STRING,
-  tags: DataTypes.ARRAY(DataTypes.STRING),
-  dateSaved: {
-    type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW,
+const photo = sequelize.define(
+  "photo",
+  {
+    imageUrl: DataTypes.STRING,
+    description: DataTypes.STRING,
+    altDescription: DataTypes.STRING,
+    tags: DataTypes.ARRAY(DataTypes.STRING),
+    dateSaved: {
+      type: DataTypes.DATE,
+      defaultValue: DataTypes.NOW,
+    },
+    userId: {
+      type: DataTypes.INTEGER,
+      references: { model: "user", key: "id" },
+    },
   },
-  userId: {
-    type: DataTypes.INTEGER,
-    references: { model: "user", key: "id" },
-  },
-});
+  { timestamps: true }
+);
 
 //Association
 photo.associate = (models) => {
