@@ -2,7 +2,7 @@
 
 # 📌 Overview
 
-A photo curation app where users can:
+A photo curation app where users can:  
 ✅ Search for images using the Unsplash API  
 ✅ Save images to collections  
 ✅ Add tags to organize images  
