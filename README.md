@@ -3,17 +3,17 @@
 # 📌 Overview
 
 A photo curation app where users can:
-✅ Search for images using the Unsplash API
-✅ Save images to collections
-✅ Add tags to organize images
-✅ Search images by tags
+✅ Search for images using the Unsplash API  
+✅ Save images to collections  
+✅ Add tags to organize images  
+✅ Search images by tags  
 ✅ Track search history
 
 # 🚀 Features
 
-🔍 Image Search – Fetch images from Unsplash API
-🏷️ Tagging System – Add & search images by tags
-📂 Collections – Organize images into collections
+🔍 Image Search – Fetch images from Unsplash API  
+🏷️ Tagging System – Add & search images by tags  
+📂 Collections – Organize images into collections  
 ⏳ Search History – Track past searches
 
 # 🛠️ Tech Stack
@@ -52,15 +52,15 @@ Create a .env file and add the following:
 
 # Supabase Database Connection
 
-DB_USER=your_supbase_project_username
-DB_NAME=postgres
-DB_HOST=your_supbase_project_hostname
-DB_PORT=5432
-DB_PASSWORD=your_supbase_project_password
+DB_USER=your_supbase_project_username  
+DB_NAME=postgres  
+DB_HOST=your_supbase_project_hostname  
+DB_PORT=5432  
+DB_PASSWORD=your_supabase_project_password
 
 # Unsplash API Credentials
 
-UNSPLASH_BASE_URL=https://api.unsplash.com
+UNSPLASH_BASE_URL=https://api.unsplash.com  
 UNSPLASH_ACCESS_KEY=your_unsplash_access_key
 
 4️⃣ Run the Server
@@ -82,35 +82,6 @@ UNSPLASH_ACCESS_KEY=your_unsplash_access_key
 | POST   | /api/photos/tag/search           | To search Photos by tags and sorting by date then save in search history model   |
 |        | ?tags=mountain&sort=ASC&userId=1 |                                                                                  |
 | GET    | /api/search-history?userId=1     | To get search history by user id 1                                               |
-
-# 📡 API Response Examples & Output
-
-1. API Endpoint: http://localhost:3000/api/search/photos?query=nature
-
-   {
-   "photos": [
-   {
-   "imageUrl": "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2ODI0ODF8MHwxfHNlYXJjaHwxfHxuYXR1cmV8ZW58MHx8fHwxNzM5Nzg4NTYzfDA&ixlib=rb-4.0.3&q=80&w=400",
-   "description": null,
-   "altDescription": "orange flowers"
-   }
-   ]
-   }
-
-2. API Endpoint: http://localhost:3000/api/search-history?userId=1
-
-   {
-   "searchHistories": [
-   {
-   "id": 2,
-   "query": "mountain",
-   "userId": 1,
-   "timestamp": "2024-12-07T14:59:17.779Z",
-   "createdAt": "2024-12-07T14:59:17.780Z",
-   "updatedAt": "2024-12-07T14:59:17.780Z"
-   },
-   ]
-   }
 
 # 🤝 Contributing
 
